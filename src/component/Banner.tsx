@@ -4,7 +4,7 @@ import { useSelector} from 'react-redux'
 const Banner = () => {
     const dark = useSelector((state: RootState) => state.toggle.value)
   return (
-    <section className={`${dark? 'bg-black':'bg-gray-50'}`}>
+    <section className={`bg-gray-50 dark:bg-black`}>
   <div
     className="mx-auto max-w-screen-xl px-4 py-24 lg:flex lg:h-screen lg:items-center"
   >
@@ -16,13 +16,13 @@ const Banner = () => {
         </strong>
       </h1>
 
-      <p className={`${dark? 'text-white':'text-black'} mt-4 sm:text-xl/relaxed`}>
+      <p className={`text-black dark:text-white mt-4 sm:text-xl/relaxed`}>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo
         tenetur fuga ducimus numquam ea!
       </p>
       <div className="mt-8 flex flex-wrap justify-center gap-4">
         <button
-          className={`${dark?'bg-white text-black': 'bg-red-600 hover:bg-red-700 text-white' }  block w-full rounded  px-12 py-3 text-sm font-medium text-white shadow  sm:w-auto`}
+          className={`dark:bg-white dark:text-black bg-red-600 hover:bg-red-700 text-white block w-full rounded  px-12 py-3 text-sm font-medium shadow  sm:w-auto`}
         >
           Get Started
         </button>
